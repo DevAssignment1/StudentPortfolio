@@ -1,3 +1,55 @@
+      /* Member 4's Custom CSS Contribution */
+        .achievement-item {
+            animation: slideInLeft 0.6s ease-out;
+        }
+
+        .achievement-item:nth-child(even) {
+            animation: slideInRight 0.6s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive adjustments for achievements */
+        @media screen and (max-width: 600px) {
+            .achievement-item {
+                padding: 15px;
+                margin: 10px 0;
+            }
+
+            .achievement-item h3 {
+                font-size: 1.1em;
+            }
+        }
+
+        /* Trophy emoji animation on hover */
+        .achievement-item:hover h3::before {
+            content: '✨ ';
+            animation: sparkle 0.5s ease-in-out;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
 
   /* Member 3's Custom CSS Contribution */
         .skill-level {
