@@ -1,0 +1,34 @@
+  /* Member 3's Custom CSS Contribution */
+        .skill-level {
+            animation: fillBar 1.5s ease-out;
+        }
+
+        @keyframes fillBar {
+            from {
+                width: 0 !important;
+            }
+        }
+
+        /* Responsive table for mobile devices */
+        @media screen and (max-width: 768px) {
+            .skills-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .skills-list li {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .skill-proficiency {
+                align-self: flex-start;
+            }
+        }
+
+        /* Hover effect for skill bars */
+        .skills-table tr:hover .skill-level {
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+        }
