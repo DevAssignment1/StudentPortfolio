@@ -537,3 +537,34 @@ footer {
         box-shadow: none;
     }
 }
+  /* Member 2's Custom CSS Contribution */
+        .project-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .project-card:hover::before {
+            left: 100%;
+        }
+
+        /* Responsive grid adjustment for projects */
+        @media screen and (max-width: 600px) {
+            .projects-grid {
+                gap: 15px;
+            }
+            
+            .project-card h3 {
+                font-size: 1.2em;
+            }
+        }
